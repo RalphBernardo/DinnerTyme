@@ -1,0 +1,62 @@
+<%= form_for @recipe, :html => { :multipart => true, :class => 'form-horizontal' } do |f| %>
+
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field span9' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :steps, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :steps, :class => 'text_area span9' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :photo, :class => 'control-label' %>
+    <div class="controls">
+    <%= f.file_field :photo %>
+    | or enter remote URL: <%= f.text_field :remote_photo_url, :class => 'text_area span9' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :serves, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :serves, :class => 'number_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :rating, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :rating, :class => 'number_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :kitchen_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :kitchen_id, Kitchen.all.map{|kitchen|[kitchen.name, kitchen.id]}, {:prompt => "Pick a kitchen"} %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control-label">Choose ingredients:</div>
+    <div class="controls">
+      <% Ingredient.all.each do |ingredient| %>
+        <%= check_box_tag 'recipe[ingredient_ids][]', ingredient.id, @recipe.ingredients.include?(ingredient) %>
+        <%= ingredient.name %>
+        &nbsp;&nbsp;
+      <% end %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                recipes_path, :class => 'btn' %>
+  </div>
+<% end %>

@@ -1,0 +1,131 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+.image_container {
+  padding: 10px;
+  background: LightSteelBlue;
+  border: 1px solid Navy;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+footer {
+ padding: 20px;
+ text-align: center;
+}
+
+/* ----Kitchen styling---- */
+
+.kitchen_container {
+  float: left;
+  width: 200px;
+  background-color: GhostWhite;
+  border: 1px solid #252525;
+  margin: 20px;
+  padding: 0 20px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
+  box-shadow: 10px 10px 5px #888;
+}
+
+.kitchen_container h4 {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.kitchen_container h5 {
+  float: right;
+  margin: 15px 0;
+}
+
+/* ----Recipe styling---- */
+
+.recipe_container {
+  float: left;
+  background-color: GhostWhite;
+  border: 1px solid #252525;
+  padding: 20px 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
+  box-shadow: 10px 10px 5px #888;
+  margin-bottom: 50px;
+}
+
+.recipe_container h3 {
+  display: inline;
+}
+
+sidebar {
+  float: right;
+  padding: 0 0 20px 30px;
+}
+
+sidebar h4 {
+  text-align: right;
+  padding: 0 0 15px;
+}
+
+.recipe_container h5 {
+  text-align: right;
+}
+
+/* ----Ingredient styling---- */
+
+.ingredient_container {
+  float: left;
+  width: 300px;
+  background-color: GhostWhite;
+  border: 1px solid #252525;
+  margin: 20px 20px 40px;
+  padding: 0 20px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
+  box-shadow: 10px 10px 5px #888;
+}
+
+.ingredient_container img {
+  width: 50%;
+  float: left;
+  padding: 20px 0;
+}
+
+.ingredient_container sidebar {
+  width: 40%;
+  float: right;
+}
+
+.ingredient_container h5 {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.ingredient_container h6 {
+  text-align: right;
+  margin: 20px 0 0;
+}
+
+.ingredient_container p {
+  text-align: center;
+  margin: 0;
+}

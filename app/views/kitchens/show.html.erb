@@ -1,0 +1,16 @@
+<%- model_class = Kitchen -%>
+<div class="page-header">
+  <h2><%=t '.title', :default => model_class.model_name.human %> Recipes: <strong><%= @kitchen.name %></strong>
+  &nbsp;
+  <%= link_to 'Back to All Kitchens', kitchens_path, :class => 'btn btn-mini' %>
+  &nbsp;
+  <%= link_to 'Back to All Recipes', recipes_path, :class => 'btn btn-mini' %></h2>
+</div>
+
+<%= render :partial => 'shared/recipe', :collection => @kitchen.recipes, :as => :recipe %>
+
+<div class="span12">
+  <%= link_to 'Back to All Kitchens', kitchens_path, :class => 'btn' %>
+  &nbsp;
+  <%= link_to 'Back to All Recipes', recipes_path, :class => 'btn' %>
+</div>

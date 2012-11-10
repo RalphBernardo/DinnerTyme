@@ -1,0 +1,33 @@
+<%= form_for @kitchen, :html => { :multipart => true, :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :photo, :class => 'control-label' %>
+    <div class="controls">
+    <%= f.file_field :photo %>
+    | or enter remote URL: Remote URL: <%= f.text_field :remote_photo_url, :class => 'text_area span9' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control-label">Choose recipes:</div>
+    <div class="controls">
+    <% Recipe.all.each do |recipe| %>
+      <%= check_box_tag 'kitchen[recipe_ids][]', recipe.id, @kitchen.recipes.include?(recipe) %>
+      <%= recipe.name %>
+      &nbsp;&nbsp;
+    <% end %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                kitchens_path, :class => 'btn' %>
+  </div>
+<% end %>
