@@ -10,7 +10,8 @@ gem 'annotate'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'twitter-bootstrap-rails'
-gem 'bootstrap-sass'
+gem 'less-rails'
+gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.

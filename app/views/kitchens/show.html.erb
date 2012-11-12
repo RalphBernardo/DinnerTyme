@@ -4,13 +4,21 @@
   &nbsp;
   <%= link_to 'Back to All Kitchens', kitchens_path, :class => 'btn btn-mini' %>
   &nbsp;
-  <%= link_to 'Back to All Recipes', recipes_path, :class => 'btn btn-mini' %></h2>
+  <%= link_to 'See All Recipes', recipes_path, :class => 'btn btn-mini' %></h2>
 </div>
 
 <%= render :partial => 'shared/recipe', :collection => @kitchen.recipes, :as => :recipe %>
 
-<div class="span12">
-  <%= link_to 'Back to All Kitchens', kitchens_path, :class => 'btn' %>
+<div class="span12 form-actions">
+  <%= link_to 'Create New Kitchen', new_kitchen_path, :class => 'btn btn-primary' %>
   &nbsp;
-  <%= link_to 'Back to All Recipes', recipes_path, :class => 'btn' %>
+  <%= link_to 'See All Kitchens', kitchens_path, :class => 'btn' %>
+  &nbsp;
+  <%= link_to 'Create New Recipe', new_recipe_path, :class => 'btn btn-primary' %>
+  &nbsp;
+  <%= link_to 'See All Recipes', recipes_path, :class => 'btn' %>
+  &nbsp;
+  <%= link_to 'Create New Ingredient', new_ingredient_path, :class => 'btn btn-primary' %>
+  &nbsp;
+  <%= link_to 'See All Ingredients', ingredients_path, :class => 'btn' %>
 </div>

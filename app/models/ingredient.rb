@@ -4,11 +4,12 @@
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  unit       :string(255)
+#  photo      :string(255)
 #  amount     :integer
+#  unit       :string(255)
+#  string     :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  photo      :string(255)
 #
 
 class Ingredient < ActiveRecord::Base

@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-DinnerTyme::Application.config.secret_token = '4e92ff62f1f8d02ba89a1ab9a410a5e7a8ce3abd07f3d93e6fc1914421529aae0abaf54c0f8efdeaefd0edd325ede4797b222af8abfb4dcebb3340c7b7837d53'
+DinnerTyme::Application.config.secret_token = '326854fe59ed3132fbbdc610a71946fd2425ae07bd882232edf15c0842c0415333fbf0fc5bc03c59a0e8d6bd9fe71a941b5eb7ea1d981311db97c2fa715eafc9'

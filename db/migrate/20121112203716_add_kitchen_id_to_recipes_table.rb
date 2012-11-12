@@ -1,4 +1,4 @@
-class AddKitchenToRecipesTable < ActiveRecord::Migration
+class AddKitchenIdToRecipesTable < ActiveRecord::Migration
   def change
     add_column :recipes, :kitchen_id, :integer
   end
