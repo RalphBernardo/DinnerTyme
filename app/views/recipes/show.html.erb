@@ -2,15 +2,23 @@
 <div class="page-header">
   <h2><%=t '.title', :default => model_class.model_name.human %> Ingredients: <strong><%= @recipe.name %></strong>
   &nbsp;
-  <%= link_to 'Back to All Recipes', recipes_path, :class => 'btn btn-mini' %></h2>
+  <%= link_to 'Back to All Recipes', recipes_path, :class => 'btn btn-mini' %>
+
+  <%= link_to 'See All Ingredients', ingredients_path, :class => 'btn btn-mini' %></h2>
 </div>
 
 <%= render :partial => 'shared/ingredient', :collection => @recipe.ingredients, :as => :ingredient %>
 
 <div class="span12 form-actions">
-  <%= link_to 'Back to All Recipes', recipes_path, :class => 'btn' %>
-  &nbsp;&nbsp;
+  <%= link_to 'Create New Recipe', new_recipe_path, :class => 'btn btn-primary' %>
+  &nbsp;
+  <%= link_to 'See All Recipes', recipes_path, :class => 'btn' %>
+  &nbsp;
+  <%= link_to 'Create New Ingredient', new_ingredient_path, :class => 'btn btn-primary' %>
+  &nbsp;
   <%= link_to 'See All Ingredients', ingredients_path, :class => 'btn' %>
-  &nbsp;&nbsp;
+  &nbsp;
+  <%= link_to 'Create New Kitchen', new_kitchen_path, :class => 'btn btn-primary' %>
+  &nbsp;
   <%= link_to 'See All Kitchens', kitchens_path, :class => 'btn' %>
 </div>
