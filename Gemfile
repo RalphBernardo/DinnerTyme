@@ -23,6 +23,7 @@ gem 'bootstrap-sass'
 gem 'less-rails-bootstrap'
 gem 'less-rails'
 gem 'therubyracer'
+gem 'taps'
 
 # Gems used only for assets and not required
 # in production environments by default.
