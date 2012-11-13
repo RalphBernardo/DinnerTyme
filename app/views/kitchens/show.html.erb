@@ -9,7 +9,7 @@
 
 <%= render :partial => 'shared/recipe', :collection => @kitchen.recipes, :as => :recipe %>
 
-<div class="span12 form-actions">
+<div class="container-fluid form-actions">
   <%= link_to 'Create New Kitchen', new_kitchen_path, :class => 'btn btn-primary' %>
   &nbsp;
   <%= link_to 'See All Kitchens', kitchens_path, :class => 'btn' %>
