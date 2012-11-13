@@ -9,8 +9,6 @@ CarrierWave.configure do |config|
   
   config.fog_directory = ENV['S3_BUCKET']
 
-  config.s3_access_policy = :public_read  # Generate http:// urls. Defaults to :authenticated_read (https://)
-
   config.fog_host = "#{ENV['S3_ASSET_URL']}/#{ENV['S3_BUCKET']}"
   
   # use only one of the following 2 settings for cloudfront
