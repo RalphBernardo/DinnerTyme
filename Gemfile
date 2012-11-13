@@ -16,7 +16,7 @@ end
 gem 'annotate'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'fog'
+gem "fog", "~> 1.3.1"
 gem 'heroku'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass'

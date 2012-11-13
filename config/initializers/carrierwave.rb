@@ -9,7 +9,7 @@ CarrierWave.configure do |config|
   
   config.fog_directory = ENV['S3_BUCKET']
 
-  config.fog_host = "#{ENV['S3_ASSET_URL']}/#{ENV['S3_BUCKET']}"
+  #config.fog_host = "#{ENV['S3_ASSET_URL']}/#{ENV['S3_BUCKET']}"
   
   # use only one of the following 2 settings for cloudfront
   #config.fog_host = "http://#{ENV['S3_BUCKET']}.s3.amazonaws.com" # for no cloudfront
