@@ -2,7 +2,19 @@
 <div class="page-header">
   <h2><%=t '.title', :default => model_class.model_name.human.pluralize %>&nbsp; &nbsp;
 
-  <%= link_to 'Create New', new_kitchen_path, :class => 'btn btn-primary' %></h2>
+  <div class="btn-group">
+    <button class="btn btn-primary">Create New</button>
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><%= link_to 'Kitchen', new_kitchen_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to 'Recipe', new_recipe_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to 'Ingredient', new_ingredient_path %></li>
+    </ul>
+  </div></h2>
 </div>
 
 <% @kitchens.each do |kitchen| %>
@@ -19,10 +31,20 @@
   </div>
 <% end %>
 
-<div class="span12 form-actions">
+<div class="clearfix"></div>
+
+<div class="row-fluid form-actions">
   <%= link_to 'Create New Kitchen', new_kitchen_path, :class => 'btn btn-primary' %>
   &nbsp;&nbsp;
-  <%= link_to 'See All Recipes', recipes_path, :class => 'btn' %>
-  &nbsp;&nbsp;
-  <%= link_to 'See All Ingredients', ingredients_path, :class => 'btn' %>
+  <div class="btn-group">
+    <button class="btn">See All</button>
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><%= link_to 'Recipes', recipes_path %></li>
+      <li class="divider"></li>
+      <li>  <%= link_to 'Ingredients', ingredients_path %></li>
+    </ul>
+  </div>
 </div>
