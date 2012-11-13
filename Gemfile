@@ -16,7 +16,6 @@ end
 gem 'annotate'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'heroku'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass'
 gem 'less-rails-bootstrap'
