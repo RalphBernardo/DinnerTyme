@@ -1,4 +1,4 @@
-class AddRecipesIngredientsJoinTable < ActiveRecord::Migration
+class IngredientsRecipesJoinTable < ActiveRecord::Migration
   def change
     create_table :ingredients_recipes, :id => false do |t|
       t.integer :ingredient_id
