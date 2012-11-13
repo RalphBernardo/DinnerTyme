@@ -15,7 +15,7 @@
   </div>
 
   <div class="field">
-    <div class="control-label">Choose recipes:</div>
+    <div class="control-label">Choose recipes</div>
     <div class="controls">
     <% Recipe.all.each do |recipe| %>
       <%= check_box_tag 'kitchen[recipe_ids][]', recipe.id, @kitchen.recipes.include?(recipe) %>

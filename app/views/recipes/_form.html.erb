@@ -44,7 +44,7 @@
   </div>
 
   <div class="field">
-    <div class="control-label">Choose ingredients:</div>
+    <div class="control-label">Choose ingredients</div>
     <div class="controls">
       <% Ingredient.all.each do |ingredient| %>
         <%= check_box_tag 'recipe[ingredient_ids][]', ingredient.id, @recipe.ingredients.include?(ingredient) %>
