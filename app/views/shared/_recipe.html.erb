@@ -8,7 +8,7 @@
 
   <h3><%= recipe.name %></h3>
   <br>
-  <strong>Chef:</strong> <%= recipe.kitchen ? link_to(recipe.kitchen.name, kitchen_path(recipe.kitchen)) : link_to('Please enter chef', edit_recipe_path(recipe)) %> |
+  <strong>Chef:</strong> <%= recipe.kitchen ? link_to(recipe.kitchen.name, kitchen_path(recipe.kitchen)) : link_to('Please enter kitchen', edit_recipe_path(recipe)) %> |
   <strong>Serves:</strong> <%= recipe.serves %> |
   <strong>Rating:</strong> <%= recipe.rating %>
   <br><br>
