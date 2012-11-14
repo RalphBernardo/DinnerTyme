@@ -11,7 +11,7 @@
     <br><br></p>
 
   </sidebar>
-  <%= image_tag(ingredient.photo.thumb.url) %>
+  <%= ingredient.photo ? image_tag(ingredient.photo.thumb.url) : link_to('Please enter photo', edit_ingredient_path(ingredient)) %>
   <br><br>
   <h5><%= link_to 'Ingredient Found In Which Recipes?', ingredient, :class => 'btn' %></h5>
 
