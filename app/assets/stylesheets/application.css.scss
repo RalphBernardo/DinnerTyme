@@ -69,7 +69,7 @@ footer {
   margin-bottom: 50px;
 }
 
-.recipe_container h3 {
+.recipe_container h3, h5 {
   display: inline;
 }
 
@@ -81,10 +81,6 @@ sidebar {
 sidebar h4 {
   text-align: right;
   padding: 0 0 15px;
-}
-
-sidebar h5 {
-  text-align: right;
 }
 
 /* ----Ingredient styling---- */

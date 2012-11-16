@@ -4,17 +4,16 @@
 
       <div class="image_container"><%= image_tag(recipe.photo.thumb.url) %></div>
 
-      <h5><%= link_to ' Edit', edit_recipe_path(recipe), :class => 'btn btn-small btn-success' %>&nbsp;
-
-	  <%= link_to ' Delete', recipe_path(recipe), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-small btn-danger' %></h5>
-
     </sidebar>
 
   <h3><%= recipe.name %></h3>
   <br>
   <strong>Chef:</strong> <%= recipe.kitchen ? link_to(recipe.kitchen.name, kitchen_path(recipe.kitchen)) : link_to('Please enter kitchen', edit_recipe_path(recipe)) %> |
   <strong>Serves:</strong> <%= recipe.serves %> |
-  <strong>Rating:</strong> <%= recipe.rating %>
+  <strong>Rating:</strong> <%= recipe.rating %>&nbsp;&nbsp;
+  <h5><%= link_to ' Edit', edit_recipe_path(recipe), :class => 'btn btn-mini btn-success' %>&nbsp;
+
+  <%= link_to ' Delete', recipe_path(recipe), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger' %></h5>
   <br><br>
   <%= recipe.steps.html_safe %>
 
