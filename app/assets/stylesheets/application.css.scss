@@ -88,7 +88,7 @@ sidebar h4 {
 .ingredient_container {
   float: left;
   width: 300px;
-  height: 245px;
+  height: 250px;
   background-color: GhostWhite;
   border: 1px solid #252525;
   margin: 20px 20px 40px;
@@ -103,7 +103,6 @@ sidebar h4 {
 
 .ingredient_container img {
   width: 50%;
-  float: left;
   padding: 20px 0;
 }
 
@@ -119,9 +118,8 @@ sidebar h4 {
 }
 
 .ingredient_container h5 {
-  margin: 20px 0 10px;
-  text-align: center;
   font-weight: normal;
+  float: right;
 }
 
 .ingredient_container h6 {
